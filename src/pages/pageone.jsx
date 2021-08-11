@@ -2,7 +2,7 @@ import React from 'react';
 
 let PageOne = () => {
 	return (
-		<h1>Page one</h1>
+		<h1>Page 1</h1>
 	)
 }
 
