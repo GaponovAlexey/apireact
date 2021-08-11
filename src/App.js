@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
-import s from './App.css';
 import store from './Redux/store';
+import './App.css'
 import PageOne from './pages/pageone';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './pages/Header/Header';

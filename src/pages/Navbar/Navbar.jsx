@@ -7,24 +7,24 @@ const Navbar = (props) => {
 	return (
 		<nav className={ s.nav }>
 			<div className={ s.item }>
-				<NavLink to="/pageone" active ClassName={ s.activelink }>
+				<NavLink to="/pageone"  className={ s.activelink }>
 					<Button color="link" >one</Button>
 				</NavLink>
 			</div>
 
 			<div className={ `${s.item}` }>
-				<NavLink to="/pagetwo" active ClassName='activelink'>
+				<NavLink to="/pagetwo"  className='activelink'>
 					<Button color="link" >two</Button>
 				</NavLink>
 			</div>
 			<div className={ s.item }>
-				<NavLink to='/pagethree' active ClassName={ s.activelink } >
+				<NavLink to='/pagethree'  className={ s.activelink } >
 					<Button color="link" >three</Button>
 				</NavLink>
 			</div>
 			<div className={ s.item }>
-				<NavLink to='/Counter' active ClassName={ s.activelink } >
-					<Button color="link" >Counter</Button>
+				<NavLink to='/counter'  className={ s.activelink } >
+					<Button color="link" >counter</Button>
 				</NavLink>
 			</div>
 			<br></br>

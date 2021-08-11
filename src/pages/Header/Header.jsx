@@ -31,15 +31,15 @@ export default function Header(props) {
 			</div>
 			<AppBar position="static" className={ s.header }>
 				<Toolbar>
-					<IconButton edge="start" className={ classes.menuButton } color="inherit" aria-label="menu">
+					<IconButton edge="start" className={ classes.menuButton }  aria-label="menu">
 						<DirectionsRunIcon />
 					</IconButton>
 					<Typography variant="h6" className={ classes.title }>
 						<img alt='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png' />
 					</Typography>
 					{ props.isAuth
-						? <div>{ props.login }<Button color="inherit" onClick={ props.logout }>log out</Button></div>
-						: <NavLink to={ '/login' }><Button className={ s.loginBlock } variant="contained" color="secondary">Login</Button></NavLink> }
+						? <div>{ props.login }<Button onClick={ props.logout }>log out</Button></div>
+						: <NavLink to={ '/login' }><Button className={ s.loginBlock } variant="contained" >Login</Button></NavLink> }
 				</Toolbar>
 			</AppBar>
 		</React.Fragment>
