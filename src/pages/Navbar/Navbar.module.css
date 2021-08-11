@@ -1,0 +1,13 @@
+.nav {
+  grid-area: n;
+  background-color: #7ea1c4;
+  border-radius: 5px;
+  padding: 30px;
+  height: fit-content;
+}
+
+.item a {
+	color: #1b365c;
+	text-decoration: none;
+}
+
