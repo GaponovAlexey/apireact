@@ -8,23 +8,23 @@ const Navbar = (props) => {
 		<nav className={ s.nav }>
 			<div className={ s.item }>
 				<NavLink to="/pageone"  className={ s.activelink }>
-					<Button color="link" >one</Button>
+					<Button  >one</Button>
 				</NavLink>
 			</div>
 
 			<div className={ `${s.item}` }>
 				<NavLink to="/pagetwo"  className='activelink'>
-					<Button color="link" >two</Button>
+					<Button >two</Button>
 				</NavLink>
 			</div>
 			<div className={ s.item }>
 				<NavLink to='/pagethree'  className={ s.activelink } >
-					<Button color="link" >three</Button>
+					<Button  >three</Button>
 				</NavLink>
 			</div>
 			<div className={ s.item }>
 				<NavLink to='/counter'  className={ s.activelink } >
-					<Button color="link" >counter</Button>
+					<Button  >counter</Button>
 				</NavLink>
 			</div>
 			<br></br>

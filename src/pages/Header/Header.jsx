@@ -34,7 +34,7 @@ export default function Header(props) {
 					<IconButton edge="start" className={ classes.menuButton }  aria-label="menu">
 						<DirectionsRunIcon />
 					</IconButton>
-					<Typography variant="h6" className={ classes.title }>
+					<Typography variant="h6"  className={ classes.title }>
 						<img alt='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png' />
 					</Typography>
 					{ props.isAuth

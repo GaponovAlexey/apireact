@@ -9,7 +9,7 @@ export const Setmybase = createSlice({
 	initialState,
 	reducers: {
 		setbase: (state, action) => {
-			state.data = action.payload.data
+			state.data.push(action.payload.data)
 		},
 	},
 })
