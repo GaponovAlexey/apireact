@@ -11,18 +11,26 @@ import { Counter } from './features/counter/Counter';
 import OneConteiner from './pages/OneConteiner';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import Auth from './superbase/Ayth';
+import Account from './superbase/Account';
+
+import './superbase/Sup.module.css';
+
+
 
 let Rout = (props) => {
   return (
     <Router>
       <div className='app-Wrapper'>
-        <Header />
+        <Header isAuth={ Auth } login={ Account} />
         <Navbar />
         <div className='app-Wrapper-Content' >
           <Route path='/pageone' component={ OneConteiner } />
           <Route path='/pagetwo' component={ PageTwo } />
           <Route path='/pagethree' component={ PageThree } />
           <Route path='/Counter' component={ Counter } />
+          <Route path='/login' component={ Auth } />
+          <Route path='/Account' component={ Account } />
         </div>
       </div>
     </Router>

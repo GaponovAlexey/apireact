@@ -27,13 +27,18 @@ const Navbar = (props) => {
 					<Button  >counter</Button>
 				</NavLink>
 			</div>
+			<div className={ s.item }>
+				<NavLink to='/Account'  className={ s.activelink } >
+					<Button  >Auth</Button>
+				</NavLink>
+			</div>
 			<br></br>
 			<br></br>
 			<br></br>
 			<div>
 				<Breadcrumbs aria-label="breadcrumb">
 					<div className={ `${s.loginBlock} ${s.item}` }>
-						{ props.isAuth ? props.login
+						{ props.login ?  props.isAuth
 							: <NavLink to={ '/login' }>login please</NavLink> }
 					</div>
 				</Breadcrumbs>
