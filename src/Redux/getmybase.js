@@ -1,20 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit'
+const FOLLOW = 'FOLLOW';
+
 
 const initialState = {
 	data: [],
 }
+const Setmybase = (state = initialState, action) => {
+	switch (action.type) {
+		case FOLLOW:
+			return {
+				...state,
+				data: action.data
+			};
+		default:
+			return state;
+	}
+}
+export const setbase = (data) => ({ type: FOLLOW, data });
+//export const { setbase } = Setmybase.actions
 
-export const Setmybase = createSlice({
-	name: 'setbasse',
-	initialState,
-	reducers: {
-		setbase: (state, action) => {
-			state.data.push(action.payload.data)
-		},
-	},
-})
-export const { setbase } = Setmybase.actions
-
-export default Setmybase.reducer
+export default Setmybase;
 
 
