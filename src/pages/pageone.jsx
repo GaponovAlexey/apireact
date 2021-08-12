@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import getRepos from '../api/repos'
+import React from 'react';
 
-let PageOne = () => {
-	const dispatch = useDispatch()
-	//const repos = useSelector(state => state.resp.data)
-
-useEffect(() => {
-	dispatch(getRepos)
-}, [])
-
+const PageOne = (props) => {
+	const repos = props.repos
 	return (
-		<h1>Page 1</h1>
+		<div>
+			<div>
+				{ repos.map((post) => <h1 key={ post.id }>{ post.client_id }</h1>) }
+			</div>
+		</div>
 	)
 }
 

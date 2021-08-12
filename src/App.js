@@ -1,13 +1,13 @@
 import { Provider } from 'react-redux';
 import store from './Redux/store';
 import './App.css'
-import PageOne from './pages/pageone';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './pages/Header/Header';
 import Navbar from './pages/Navbar/Navbar';
 import PageThree from './pages/pagethre';
 import PageTwo from './pages/pagetwo';
 import { Counter } from './features/counter/Counter';
+import OneConteiner from './pages/OneConteiner';
 
 
 function Rout() {
@@ -17,7 +17,7 @@ function Rout() {
         <Header />
         <Navbar />
         <div className='app-Wrapper-Content' >
-          <Route path='/pageone' component={ PageOne } />
+          <Route path='/pageone' component={ OneConteiner } />
           <Route path='/pagetwo' component={ PageTwo } />
           <Route path='/pagethree' component={ PageThree } />
           <Route path='/Counter' component={ Counter } />

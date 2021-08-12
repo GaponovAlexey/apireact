@@ -5,7 +5,7 @@ import Setmybase from './getmybase';
 export const store = configureStore({
 	reducer: {
 		counter: counterReducer,
-		setbasse: Setmybase,
+		data: Setmybase,
 	},
 })
 
