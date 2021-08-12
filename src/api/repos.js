@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { setbase } from '../Redux/getmybase';
 //import useSWR from 'swr'
+import { useEffect } from 'react';
 
 
 
@@ -11,8 +11,8 @@ const getRepos = async (dispatch) => {
 		throw new Error(data.message)
 	}
 	return dispatch(setbase(data))
-
 }
+
 
 
 export default getRepos;

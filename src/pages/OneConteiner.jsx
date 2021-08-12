@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+//import getRepos from '../api/axiosApi';
 import PageOne from './pageone';
 import getRepos from './../api/repos';
 
-let OneConteiner = () => {
+let OneConteiner = (props) => {
 	const dispatch = useDispatch()
 	useEffect(() => {
 		dispatch(getRepos)
@@ -11,7 +12,7 @@ let OneConteiner = () => {
 
 
 	const repos = useSelector(state => state.data.data)
-
+	console.log(process.env);
 	return (
 		<div>
 			<div>
@@ -20,5 +21,6 @@ let OneConteiner = () => {
 		</div>
 	)
 }
+
 
 export default OneConteiner;

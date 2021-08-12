@@ -1,4 +1,5 @@
-import { Provider } from 'react-redux';
+import React from 'react';
+import { connect, Provider } from 'react-redux';
 import store from './Redux/store';
 import './App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -8,9 +9,10 @@ import PageThree from './pages/pagethre';
 import PageTwo from './pages/pagetwo';
 import { Counter } from './features/counter/Counter';
 import OneConteiner from './pages/OneConteiner';
+import { compose } from 'redux';
+import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
-
-function Rout() {
+let Rout = (props) => {
   return (
     <Router>
       <div className='app-Wrapper'>
@@ -26,18 +28,20 @@ function Rout() {
     </Router>
   );
 }
+let mapStateToProps = state => ({
+  data: state.data.data
+})
 
 
-
-
-function App() {
+let App = (props) => {
   return (
     <Provider store={ store }>
       <div className="App">
-        <Rout />
+        <AppConteiner />
       </div>
     </Provider>
-  );
+  )
 }
 
+const AppConteiner = compose(withRouter(connect(mapStateToProps)((Rout))));
 export default App;
