@@ -1,8 +1,18 @@
 import React from 'react';
 
-let PageTwo = () => {
+let PageTwo = ({ id, client_id, call_start }) => {
+
 	return (
-		<h1>Page two</h1>
+		<div>
+			<div>
+				<input type='checkbox'
+					defaultChecked={ false }
+				/>
+				<span>{ id }</span>
+				<span>{ client_id }</span>
+				<span>{ call_start }</span>
+			</div>
+		</div>
 	)
 }
 

@@ -2,11 +2,10 @@ import React from 'react';
 import { connect, Provider } from 'react-redux';
 import store from './Redux/store';
 import './App.css'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './pages/Header/Header';
 import Navbar from './pages/Navbar/Navbar';
 import PageThree from './pages/pagethre';
-import PageTwo from './pages/pagetwo';
 import { Counter } from './features/counter/Counter';
 import OneConteiner from './pages/OneConteiner';
 import { compose } from 'redux';
@@ -15,6 +14,7 @@ import Auth from './superbase/Ayth';
 import Account from './superbase/Account';
 
 import './superbase/Sup.module.css';
+import TwoConteiner from './pages/TwoConteiner';
 
 
 
@@ -22,11 +22,11 @@ let Rout = (props) => {
   return (
     <Router>
       <div className='app-Wrapper'>
-        <Header isAuth={ Auth } login={ Account} />
+        <Header isAuth={ Auth } login={ Account } />
         <Navbar />
         <div className='app-Wrapper-Content' >
           <Route path='/pageone' component={ OneConteiner } />
-          <Route path='/pagetwo' component={ PageTwo } />
+          <Route path='/pagetwo' component={ TwoConteiner } />
           <Route path='/pagethree' component={ PageThree } />
           <Route path='/Counter' component={ Counter } />
           <Route path='/login' component={ Auth } />
@@ -43,11 +43,15 @@ let mapStateToProps = state => ({
 
 let App = (props) => {
   return (
-    <Provider store={ store }>
-      <div className="App">
-        <AppConteiner />
-      </div>
-    </Provider>
+    <React.Fragment>
+      <BrowserRouter >
+        <Provider store={ store }>
+          <div className="App">
+            <AppConteiner />
+          </div>
+        </Provider>
+      </BrowserRouter>
+    </React.Fragment>
   )
 }
 
