@@ -13,11 +13,14 @@ const TwoConteiner = () => {
 	}, [])
 	let repos = useSelector(state => state.data.data)
 	let id = repos.map(post => post.id)
-	let [todos, setTodos] = useState([id])
+	let [todos, setTodos] = useState(
+		{ id: 1, title: 'first todo', completed: false },
+		{ id: 2, title: 'second todo', completed: false },
+	)
 
 	let [todoTitle, setTodoTitle] = useState('')
 
-	const addTodo = event => {
+	let addTodo = event => {
 		if (event.key === 'Enter') {
 			setTodos([
 				...todos,
@@ -29,18 +32,18 @@ const TwoConteiner = () => {
 			])
 		}
 	}
-	
+	console.log(todos);
+
 	return (
 		<div>
 			<div>
 				<div>
-					<Todolist todos={ todos} />
 				</div>
 				<input type='text'
 					value={ todoTitle }
 					onChange={ event => setTodoTitle(event.target.value) }
 					onKeyPress={ addTodo }
-					/>
+				/>
 				<label>ToDo name</label>
 				<div>
 					<button  >+1</button>
@@ -50,13 +53,7 @@ const TwoConteiner = () => {
 		</div>
 	)
 }
-export let Todolist = ({ todos }) => {
-	return (
-		<div>
-			{ todos.map(item => <PageTwo key={ item.id } { ...item }/>) }
-		</div>
-	)
-}
+
 
 
 export default TwoConteiner;

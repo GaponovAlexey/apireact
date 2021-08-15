@@ -18,7 +18,7 @@ import TwoConteiner from './pages/TwoConteiner';
 
 
 
-let Rout = (props) => {
+let Rout = () => {
   return (
     <Router>
       <div className='app-Wrapper'>
@@ -41,7 +41,7 @@ let mapStateToProps = state => ({
 })
 
 
-let App = (props) => {
+let App = () => {
   return (
     <React.Fragment>
       <BrowserRouter >
