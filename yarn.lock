@@ -1505,6 +1505,169 @@
     "prop-types" "^15.7.2"
     "react-is" "^16.8.0 || ^17.0.0"
 
+"@material/animation@^6.0.0":
+  "integrity" "sha512-BxlzXzQ5W2WtaEVV4/PqkTpKB5PfOUvPmr1EK8+xQ0ouMV4qiWuwBfnu7DgXF+cglpFP3T71uHVYmh6lMdi4vg=="
+  "resolved" "https://registry.npmjs.org/@material/animation/-/animation-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "tslib" "^1.9.3"
+
+"@material/base@^6.0.0":
+  "integrity" "sha512-S3rT7B9xa9IfHXIvYXYqbo6YVu9FWbFqTt1tMUCniizTRlpmHu9b5pmQ20f6mm3K3wAFD+crqsrtie2Y8h8r5g=="
+  "resolved" "https://registry.npmjs.org/@material/base/-/base-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "tslib" "^1.9.3"
+
+"@material/button@^6.0.0":
+  "integrity" "sha512-Xv83A5dL5l8hQHM1gOeD/0DpjsbzPeZtrXBWvf2q0d1uN0LE52ocrTHXJnJw9zNudoaBTopTQDsFQEdWqVYlFA=="
+  "resolved" "https://registry.npmjs.org/@material/button/-/button-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/density" "^6.0.0"
+    "@material/elevation" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/ripple" "^6.0.0"
+    "@material/rtl" "^6.0.0"
+    "@material/shape" "^6.0.0"
+    "@material/theme" "^6.0.0"
+    "@material/touch-target" "^6.0.0"
+    "@material/typography" "^6.0.0"
+
+"@material/density@^6.0.0":
+  "integrity" "sha512-svKiq7XtUg89hf08XGFF46NdiQAZfey5CiatmNxD3WX7LUoCb5zc8K9BqPL63P1Sh6kty9R0AHj+6w4ASFetPA=="
+  "resolved" "https://registry.npmjs.org/@material/density/-/density-6.0.0.tgz"
+  "version" "6.0.0"
+
+"@material/dom@^6.0.0":
+  "integrity" "sha512-9hvoi3MxR25dmyv15xJGRS+Ezlr0oD+Y6k4UyAbLpExFP2OakTZc8Xj0Fd7Nwav3I5aIXyC5jJ2gvhZcy1cI9A=="
+  "resolved" "https://registry.npmjs.org/@material/dom/-/dom-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/feature-targeting" "^6.0.0"
+    "tslib" "^1.9.3"
+
+"@material/elevation@^6.0.0":
+  "integrity" "sha512-9WNBu/MKTQX40Ev3ayq5V8Pf/E/DqUPRQO8F0YA99jRWuYScpX2zeJlpRe+wLI6zIxtfFcVvRW9D4O1s1Bmbdg=="
+  "resolved" "https://registry.npmjs.org/@material/elevation/-/elevation-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/animation" "^6.0.0"
+    "@material/base" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/theme" "^6.0.0"
+
+"@material/feature-targeting@^6.0.0":
+  "integrity" "sha512-REj9VJnqkGwpngffc/iHGPt8WTF27QFPWDD8VBNXaP+MmnpIu7V5q5JMoozKzG5uk+hVryzam1i2PJHztizDXg=="
+  "resolved" "https://registry.npmjs.org/@material/feature-targeting/-/feature-targeting-6.0.0.tgz"
+  "version" "6.0.0"
+
+"@material/floating-label@^6.0.0":
+  "integrity" "sha512-hLCsJKAJtVUUcxTbphqn6JZTbkOa3TW5nLgcwcgWqTbjOWOafppnplKELeM+6oDvwg/YDcGSsvuPUOsCMRiXvw=="
+  "resolved" "https://registry.npmjs.org/@material/floating-label/-/floating-label-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/animation" "^6.0.0"
+    "@material/base" "^6.0.0"
+    "@material/dom" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/rtl" "^6.0.0"
+    "@material/theme" "^6.0.0"
+    "@material/typography" "^6.0.0"
+    "tslib" "^1.9.3"
+
+"@material/line-ripple@^6.0.0":
+  "integrity" "sha512-LppQy+bnkAD+tyGOA6/GzE4/xBGRzvJNGJZe0OvClerBxM9yOtxd8Xa8VJ+ul1hTNR/OCB2HSTWNQq5fyqTQHg=="
+  "resolved" "https://registry.npmjs.org/@material/line-ripple/-/line-ripple-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/animation" "^6.0.0"
+    "@material/base" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/theme" "^6.0.0"
+    "tslib" "^1.9.3"
+
+"@material/notched-outline@^6.0.0":
+  "integrity" "sha512-fSn/3rQblUmFny3qeCnWgXkQyV+nfpuXmPhf41cjUlu28TnTKA2YayL+vg8Ebi97l6osAFaT/1dEaebvpwebaQ=="
+  "resolved" "https://registry.npmjs.org/@material/notched-outline/-/notched-outline-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/base" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/floating-label" "^6.0.0"
+    "@material/rtl" "^6.0.0"
+    "@material/shape" "^6.0.0"
+    "@material/theme" "^6.0.0"
+    "tslib" "^1.9.3"
+
+"@material/ripple@^6.0.0":
+  "integrity" "sha512-z+ARpjBVkRZBhiX20aAxAMrgBcfpcCRqIcI/E3Esfyo7M+q/mm8t92ZumcahxWnOBJkHM55kkpUqHlfkYlfyZQ=="
+  "resolved" "https://registry.npmjs.org/@material/ripple/-/ripple-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/animation" "^6.0.0"
+    "@material/base" "^6.0.0"
+    "@material/dom" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/theme" "^6.0.0"
+    "tslib" "^1.9.3"
+
+"@material/rtl@^6.0.0":
+  "integrity" "sha512-/WkzlUm3qylWMqv7Lw7ColZ8DYvEvTXtevxxz7PKM1hT9FNlbO1/Qywvda4VUtXivEeynXEqeT1T/ZYHV9yDVw=="
+  "resolved" "https://registry.npmjs.org/@material/rtl/-/rtl-6.0.0.tgz"
+  "version" "6.0.0"
+
+"@material/shape@^6.0.0":
+  "integrity" "sha512-tZT9GGWI3QcOtyfJ07Hc3noP2b5Bvx2npx/aj+k7gEIkE06mzr08dVnVOup8z8HbHWIenxRJgdeF5+lAfBE3vw=="
+  "resolved" "https://registry.npmjs.org/@material/shape/-/shape-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/feature-targeting" "^6.0.0"
+    "@material/rtl" "^6.0.0"
+
+"@material/textfield@^6.0.0":
+  "integrity" "sha512-BZAdsVYilstY4rvHxb0n/Vgs4/IcAO7U5dpcLDRWJlvOtbtfxNl4C5HuSaVUz7Mxr7+HhZAZfz3GkC1YY9XeEQ=="
+  "resolved" "https://registry.npmjs.org/@material/textfield/-/textfield-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/animation" "^6.0.0"
+    "@material/base" "^6.0.0"
+    "@material/density" "^6.0.0"
+    "@material/dom" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/floating-label" "^6.0.0"
+    "@material/line-ripple" "^6.0.0"
+    "@material/notched-outline" "^6.0.0"
+    "@material/ripple" "^6.0.0"
+    "@material/rtl" "^6.0.0"
+    "@material/shape" "^6.0.0"
+    "@material/theme" "^6.0.0"
+    "@material/typography" "^6.0.0"
+    "tslib" "^1.9.3"
+
+"@material/theme@^6.0.0":
+  "integrity" "sha512-dViBx1lsidoQhVi/MYksTmDs8aUPj3mPVQIaBPtDRtqpIuWSwG7bCHoY8rG8FHRduPLpq3b1A4OwKHBd0RWVJw=="
+  "resolved" "https://registry.npmjs.org/@material/theme/-/theme-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/feature-targeting" "^6.0.0"
+
+"@material/touch-target@^6.0.0":
+  "integrity" "sha512-qZjrxo6honqxRV2Gy7spgkfj1qzSwy2IC8xtQb6bIolDD7kbzOxmyyaMi+TxQE0QnRWG/w6DVBSsPPQGNt4Saw=="
+  "resolved" "https://registry.npmjs.org/@material/touch-target/-/touch-target-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/base" "^6.0.0"
+    "@material/feature-targeting" "^6.0.0"
+
+"@material/typography@^6.0.0":
+  "integrity" "sha512-+4UUEYOxINMRUdyAltd1HFydjAy+MeXqUkFUXXNVsi5nFlpGTpMrxriwVaeL++XlGgvziJjDzaOe6S7zkwYxOQ=="
+  "resolved" "https://registry.npmjs.org/@material/typography/-/typography-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@material/feature-targeting" "^6.0.0"
+    "@material/theme" "^6.0.0"
+
 "@nodelib/fs.scandir@2.1.4":
   "integrity" "sha512-33g3pMJk3bg5nXbL/+CY6I2eJDzZAni49PfJnL5fghPTggPvBd/pFNSgJsdAgWptuFu7qq/ERvOYFlhvsLTCKA=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz"
@@ -1952,6 +2115,13 @@
   "integrity" "sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug=="
   "resolved" "https://registry.npmjs.org/@types/q/-/q-1.5.4.tgz"
   "version" "1.5.4"
+
+"@types/react-dom@^17.0.9":
+  "integrity" "sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg=="
+  "resolved" "https://registry.npmjs.org/@types/react-dom/-/react-dom-17.0.9.tgz"
+  "version" "17.0.9"
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-redux@^7.1.16":
   "integrity" "sha512-9iwAsPyJ9DLTRH+OFeIrm9cAbIj1i2ANL3sKQFATqnPWRbg+jEFXyZOKHiQK/N86pNRXbb4HRxAxo0SIX1XwzQ=="
@@ -11285,6 +11455,11 @@
   "version" "1.14.1"
 
 "tslib@^1.9.0":
+  "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
+  "version" "1.14.1"
+
+"tslib@^1.9.3":
   "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"

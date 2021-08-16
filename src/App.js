@@ -45,10 +45,8 @@ let App = () => {
   return (
     <React.Fragment>
       <BrowserRouter >
-        <Provider store={ store }>
-          <div className="App">
+        <Provider className="App" store={ store } >
             <AppConteiner />
-          </div>
         </Provider>
       </BrowserRouter>
     </React.Fragment>

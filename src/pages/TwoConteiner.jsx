@@ -1,58 +1,100 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import getRepos from '../api/repos';
-import PageTwo from './pagetwo';
-
-
+import PageTwo from './PageTwo';
+import getRepos from './../api/repos';
+import { Context } from './context';
+import reducer from './reducer';
 
 
 const TwoConteiner = () => {
-	let dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(getRepos)
-	}, [])
-	let repos = useSelector(state => state.data.data)
-	let id = repos.map(post => post.id)
-	let [todos, setTodos] = useState(
-		{ id: 1, title: 'first todo', completed: false },
-		{ id: 2, title: 'second todo', completed: false },
+	//	let dispatch = useDispatch();
+	//	useEffect(() => {
+	//		dispatch(getRepos)
+	//	}, [])
+	//	let repos = useSelector(state => state.data.data)
+	//let ids = repos.map(post => post.id)
+
+	const [state, dispatch] = useReducer(reducer,
+		JSON
 	)
 
+	let [todos, setTodos] = useState([])
 	let [todoTitle, setTodoTitle] = useState('')
 
-	let addTodo = event => {
-		if (event.key === 'Enter') {
+	const handleClick = () => {
+		console.log('cick');
+	}
+
+	useEffect(() => {
+		document.addEventListener('click', handleClick)
+		const row = localStorage.getItem('todos') || []
+		setTodos(JSON.parse(row))
+		return () => {
+			document.removeEventListener('click', handleClick)
+		}
+	}, [])
+
+
+	useEffect(() => {
+		localStorage.setItem('todos', JSON.stringify(todos))
+	})
+
+
+	const addTodo = e => {
+		if (e.key === 'Enter') {
 			setTodos([
-				...todos,
-				{
+				...todos, {
 					id: Date.now(),
 					title: todoTitle,
-					completed: false
+					completed: false,
 				}
 			])
+			setTodoTitle('')
 		}
 	}
-	console.log(todos);
+
+	const removeTodo = id => {
+		setTodos(todos.filter(todo => {
+			return todo.id !== id
+		}))
+	}
+
+	const toggleTodo = id => {
+		setTodos(todos.map(todo => {
+			if (todo.id === id) {
+				todo.completed = !todo.completed
+			}
+			return todo
+		}))
+	}
 
 	return (
-		<div>
+		<Context.Provider value={ {
+			removeTodo, toggleTodo
+		} }>
+
 			<div>
 				<div>
-				</div>
-				<input type='text'
-					value={ todoTitle }
-					onChange={ event => setTodoTitle(event.target.value) }
-					onKeyPress={ addTodo }
-				/>
-				<label>ToDo name</label>
-				<div>
-					<button  >+1</button>
-					<button onClick={ () => alert('hi') }>sdasd</button>
+					<div>
+						<PageTwo todos={ todos } />
+					</div>
+					<input type='text'
+						value={ todoTitle }
+						onChange={ e => setTodoTitle(e.target.value) }
+						onKeyPress={ addTodo }
+					/>
+					<label>ToDo name</label>
+					<div>
+						<button  >+1</button>
+						<button onClick={ () => alert('hisbala') }>sdasd</button>
+					</div>
 				</div>
 			</div>
-		</div>
+		</Context.Provider>
 	)
 }
+
+
 
 
 

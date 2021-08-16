@@ -1,17 +1,10 @@
 import React from 'react';
+import TodoItem from './todoItem';
 
-let PageTwo = ({ id, client_id, call_start }) => {
-
+let PageTwo = ({ todos }) => {
 	return (
 		<div>
-			<div>
-				<input type='checkbox'
-					defaultChecked={ false }
-				/>
-				<span>{ id }</span>
-				<span>{ client_id }</span>
-				<span>{ call_start }</span>
-			</div>
+			{ todos.map(value => <TodoItem key={ value.id } { ...value } />) }
 		</div>
 	)
 }
