@@ -7,18 +7,18 @@ import reducer from './reducer';
 
 
 const TwoConteiner = () => {
-	//	let dispatch = useDispatch();
-	//	useEffect(() => {
-	//		dispatch(getRepos)
-	//	}, [])
-	//	let repos = useSelector(state => state.data.data)
+		let dispatchs = useDispatch();
+		useEffect(() => {
+			dispatchs(getRepos)
+		}, [])
+		let repos = useSelector(state => state.data.data)
 	//let ids = repos.map(post => post.id)
 
 	const [state, dispatch] = useReducer(reducer,
 		JSON
 	)
 
-	let [todos, setTodos] = useState([])
+	let [todos, setTodos] = useState([repos])
 	let [todoTitle, setTodoTitle] = useState('')
 
 	const handleClick = () => {
@@ -40,58 +40,71 @@ const TwoConteiner = () => {
 	})
 
 
+	//const addTodo = e => {
+	//	if (e.key === 'Enter') {
+	//		setTodos([
+	//			...todos, {
+	//				id: Date.now(),
+	//				title: todoTitle,
+	//				completed: false,
+	//			}
+	//		])
+	//		setTodoTitle('')
+	//	}
+	//}
+
 	const addTodo = e => {
 		if (e.key === 'Enter') {
 			setTodos([
 				...todos, {
-					id: Date.now(),
-					title: todoTitle,
-					completed: false,
-				}
+				id: Date.now(),
+				title: todoTitle,
+				completed: false,
+			}
 			])
 			setTodoTitle('')
+	}
+}
+
+const removeTodo = id => {
+	setTodos(todos.filter(todo => {
+		return todo.id !== id
+	}))
+}
+
+const toggleTodo = id => {
+	setTodos(todos.map(todo => {
+		if (todo.id === id) {
+			todo.completed = !todo.completed
 		}
-	}
+		return todo
+	}))
+}
 
-	const removeTodo = id => {
-		setTodos(todos.filter(todo => {
-			return todo.id !== id
-		}))
-	}
+return (
+	<Context.Provider value={ {
+		removeTodo, toggleTodo
+	} }>
 
-	const toggleTodo = id => {
-		setTodos(todos.map(todo => {
-			if (todo.id === id) {
-				todo.completed = !todo.completed
-			}
-			return todo
-		}))
-	}
-
-	return (
-		<Context.Provider value={ {
-			removeTodo, toggleTodo
-		} }>
-
+		<div>
 			<div>
 				<div>
-					<div>
-						<PageTwo todos={ todos } />
-					</div>
-					<input type='text'
-						value={ todoTitle }
-						onChange={ e => setTodoTitle(e.target.value) }
-						onKeyPress={ addTodo }
-					/>
-					<label>ToDo name</label>
-					<div>
-						<button  >+1</button>
-						<button onClick={ () => alert('hisbala') }>sdasd</button>
-					</div>
+					<PageTwo todos={ todos } />
+				</div>
+				<input type='text'
+					value={ todoTitle }
+					onChange={ e => setTodoTitle(e.target.value) }
+					onKeyPress={ addTodo }
+				/>
+				<label>ToDo name</label>
+				<div>
+					<button  >+1</button>
+					<button onClick={ () => alert('hisbala') }>sdasd</button>
 				</div>
 			</div>
-		</Context.Provider>
-	)
+		</div>
+	</Context.Provider>
+)
 }
 
 
