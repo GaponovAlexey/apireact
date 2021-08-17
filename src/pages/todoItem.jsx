@@ -1,29 +1,26 @@
 import React, { useContext, useState } from 'react';
 import { Context } from './context';
+import './todo.css';
 
 let TodoItem = ({ title, id, completed }) => {
 
-
-	const [checked, setChecked] = useState(completed)
-	const { toggleTodo, removeTodo } = useContext(Context)
-
+	const [comp, setComp] = useState('')
 
 	const cls = ['todo']
-	if (completed) {
-		cls.push('completed')
+	if (comp) {
+		cls.push('chek')
 	}
+
 	return (
-		<div className={ cls.join('') }>
+		<div className={ cls.join('') } >
 			<label>
 				<input
 					type='checkbox'
-					checked={ completed }
-					onChange={ () => toggleTodo(id)}
+					onChange={ () => setComp(!comp) }
 				/>
 				<span > { title } </span>
 
-				<i 
-				onClick={()=> removeTodo(id)}
+				<i
 				> deletet</i>
 			</label>
 		</div>
