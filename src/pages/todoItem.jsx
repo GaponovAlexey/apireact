@@ -13,6 +13,7 @@ let TodoItem = ({ title, id, completed }) => {
 
 	return (
 		<div className={ cls.join('') } >
+			
 			<label>
 				<input
 					type='checkbox'
