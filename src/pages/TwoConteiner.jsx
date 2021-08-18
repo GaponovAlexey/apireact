@@ -24,6 +24,7 @@ const TwoConteiner = () => {
 					completed: false,
 				}
 			])
+			setTodoUse('')
 		}
 	}
 	return (
