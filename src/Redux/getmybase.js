@@ -15,6 +15,9 @@ export const Setmybase = createSlice({
 })
 
 
+
+
+
 export const { setbase } = Setmybase.actions
 
 export default Setmybase.reducer
