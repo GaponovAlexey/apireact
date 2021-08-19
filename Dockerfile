@@ -6,8 +6,10 @@ COPY package.json /app/
 
 COPY . .
 
-RUN yarn install
+ENV PORT 4200
 
-EXPOSE 3000
+EXPOSE $PORT
+
+RUN yarn install
 
 CMD [ "yarn", "start" ]
